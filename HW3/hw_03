@@ -1,0 +1,347 @@
+####Question 1
+
+<table style="text-align:center">
+	<thead style="font-weight:bold">
+		<td style="width:200px">
+			Lexeme
+		</td>
+		<td style="width:200px">
+			Token
+		</td>
+		<td style="width:200px">
+			Regular Definition
+		</td>
+	</thead>
+	<tr>
+		<td>float</td>
+		<td>&lt float &gt</td>
+		<td>[0-9]+([.][0-9]+)?(e[+-]?[0-9]+)?</td>	
+	</tr>
+	<tr>
+		<td>limitedSquare</td>
+		<td>&lt id, "limitedSquare" &gt</td>
+		<td>[a-zA-Z_]([a-zA-Z_]|[0-9])*</td>
+	</tr>
+	<tr>
+		<td>(</td>
+		<td>&lt OPEN_PAR &gt</td>		
+		<td>"("</td>	
+	</tr>
+	<tr>
+		<td>float</td>
+		<td>&lt float &gt</td>	
+		<td>[0-9]+([.][0-9]+)?(e[+-]?[0-9]+)?</td>	
+	</tr>
+	<tr>
+		<td>x</td>
+		<td>&lt id, "x" &gt</td>	
+		<td>[a-zA-Z_]([a-zA-Z_]|[0-9])*</td>
+	</tr>
+	<tr>
+		<td>)</td>
+		<td>&lt CLOSE_PAR &gt</td>		
+		<td>")"</td>
+	</tr>
+	<tr>
+		<td>{</td>
+		<td>&lt OPEN_BR &gt</td>	
+		<td>{</td>	
+	</tr>
+	<tr>
+		<td>return</td>
+		<td>&lt FUNC_RET &gt</td>		
+		<td>return</td>
+	</tr>
+	<tr>
+		<td>(</td>
+		<td>&lt OPEN_PAR &gt</td>
+		<td>"("</td>		
+	</tr>
+	<tr>
+		<td>x</td>
+		<td>&lt id, "x" &gt</td>		
+		<td>[a-zA-Z_]([a-zA-Z_]|[0-9])*</td>
+	</tr>
+	<tr>
+		<td><=</td>
+		<td>&lt REL_OP, LTE &gt</td>
+		<td><=</td>		
+	</tr>
+	<tr>
+		<td>-10.0</td>
+		<td>&lt Decimal_Const, -10 &gt</td>
+		<td>[0-9]+([.][0-9]+)?(e[+-]?[0-9]+)?</td>
+	</tr>
+	<tr>
+		<td>||</td>
+		<td>&lt REL_OP, OR &gt</td>		
+		<td>||</td>
+	</tr>
+	<tr>
+		<td>x</td>
+		<td>&lt id, "x" &gt</td>	
+		<td>[a-zA-Z_]([a-zA-Z_]|[0-9])*</td>
+	</tr>
+	<tr>
+		<td>>=</td>
+		<td>&lt REL_OP, GTE &gt</td>		
+		<td>>=</td>
+	</tr>
+	<tr>
+		<td>10.0</td>
+		<td>&lt Decimal_Const, 10.0 &gt</td>
+		<td>[0-9]+([.][0-9]+)?(e[+-]?[0-9]+)?</td>
+	</tr>
+	<tr>
+		<td>)</td>
+		<td>&lt CLOSE_PAR &gt</td>		
+		<td>")"</td>
+	</tr>
+	<tr>
+		<td>?</td>
+		<td>&lt REL_OP, BOOL_T &gt</td>	
+		<td>"?"</td>
+	</tr>
+	<tr>
+		<td>100</td>
+		<td>&lt Decimal_Const, 100 &gt</td>
+		<td>[0-9]+([.][0-9]+)?(e[+-]?[0-9]+)?</td>
+	</tr>
+	<tr>
+		<td>:</td>
+		<td>&lt REL_OP, BOOL_F &gt</td>
+		<td>:</td>
+	</tr>
+	<tr>
+		<td>x</td>
+		<td>&lt id, "x" &gt</td>	
+		<td>[a-zA-Z_]([a-zA-Z_]|[0-9])*</td>
+	</tr>
+	<tr>
+		<td>*</td>
+		<td>&lt REL_OP, MULT &gt</td>		
+		<td>"*"</td>
+	</tr>
+	<tr>
+		<td>x</td>
+		<td>&lt id, "x" &gt</td>		
+		<td>[a-zA-Z_]([a-zA-Z_]|[0-9])*</td>
+	</tr>
+	<tr>
+		<td>;</td>
+		<td>&lt SEMICOLON &gt</td>		
+		<td>;</td>
+	</tr>
+	<tr>
+		<td>}</td>
+		<td>&lt CLOSE_BR &gt</td>	
+		<td>}</td>	
+	</tr>	
+</table>
+
+####Question 2
+<table style="text-align:center">
+	<thead style="font-weight:bold">
+		<td style="width:200px">
+			Lexeme
+		</td>
+		<td style="width:200px">
+			Token
+		</td>
+		<td style="width:200px">
+			Regular Definition
+		</td>
+	</thead>
+	<tr>
+		<td>Hello, how are</td>
+		<td>&lt string, "Hello, how are" &gt</td>
+		<td>[^<]*</td>
+	</tr>
+	<tr>
+		<td><</td>
+		<td>&lt TAG_OPEN &gt</td>
+		<td><</td>
+	</tr>
+	<tr>
+		<td>b</td>
+		<td>&lt TAG_b &gt</td>
+		<td>b</td>
+	</tr>
+	<tr>
+		<td>></td>
+		<td>&lt TAG_CLOSE &gt</td>
+		<td>></td>
+	</tr>
+	<tr>
+		<td>you</>
+		<td>&lt string, "you" &gt</td>
+		<td>[^<]*</td>
+	</tr>
+	<tr>
+		<td><</td>
+		<td>&lt TAG_OPEN &gt</td>
+		<td><</td>
+	</tr>
+	<tr>
+		<td>/b</td>
+		<td>&lt TAGEND_b &gt</td>
+		<td>"/"b or \/b</td>
+	</tr>
+	<tr>
+		<td>></td>
+		<td>&lt TAG_CLOSE &gt</td>
+		<td>></td>
+	</tr>
+
+	<tr>
+		<td>?</td>
+		<td>&lt string, "?" &gt</td>
+		<td>[^<]*</td>
+	</tr>
+	<tr>
+		<td><</td>
+		<td>&lt TAG_OPEN &gt</td>
+		<td><</td>
+	</tr>
+	<tr>
+		<td>p</td>
+		<td>&lt TAG_p &gt</td>
+		<td>p</td>
+	</tr>
+	<tr>
+		<td>></td>
+		<td>&lt TAG_CLOSE &gt</td>
+		<td>></td>
+	</tr>
+	<tr>
+		<td>This is an image: </td>
+		<td>&lt string, "This is an image: " &gt</td>
+		<td>[^<]*</td>
+	</tr>
+	<tr>
+		<td><</td>
+		<td>&lt TAG_OPEN &gt</td>
+		<td><</td>
+	</tr>
+	<tr>
+		<td>img</td>
+		<td>&lt TAG_img &gt</td>
+		<td>img</td>
+	</tr>
+	<tr>
+		<td>src</td>
+		<td>&lt ATTR_src &gt</td>
+		<td>src</td>
+	</tr>
+	<tr>
+		<td>=</td>
+		<td>&lt ASSIGN &gt</td>
+		<td>=</td>
+	</tr>
+	<tr>
+		<td>"pic.jpg"</td>
+		<td>&lt value, "pic.jpg" &gt</td>
+		<td>\"[a-zA-Z_0-9.]*\"</td>
+	</tr>
+	<tr>
+		<td>></td>
+		<td>&lt TAG_CLOSE &gt</td>
+		<td>></td>
+	</tr>
+	<tr>
+		<td><</td>
+		<td>&lt TAG_OPEN &gt</td>
+		<td><</td>
+	</tr>
+	<tr>
+		<td>br</td>
+		<td>&lt TAG_br &gt</td>
+		<td>br</td>
+	</tr>
+	<tr>
+		<td>></td>
+		<td>&lt TAG_CLOSE &gt</td>
+		<td>></td>
+	</tr>
+	<tr>
+		<td>And this is a hyperlink: </td>
+		<td>&lt string, "And this is a hyperlink: " &gt</td>
+		<td>[^<]*</td>
+	</tr>
+	<tr>
+		<td><</td>
+		<td>&lt TAG_OPEN &gt</td>
+		<td><</td>
+	</tr>
+	<tr>
+		<td>a</td>
+		<td>&lt TAG_a &gt</td>
+		<td>a</td>
+	</tr>
+	<tr>
+		<td>href</td>
+		<td>&lt ATTR_href &gt</td>
+		<td>href</td>
+	</tr>
+	<tr>
+		<td>=</td>
+		<td>&lt ASSIGN &gt</td>
+		<td>=</td>
+	</tr>
+	<tr>
+		<td>"site.html"</td>
+		<td>&lt value, "site.html" &gt</td>
+		<td>\"[a-zA-Z_0-9.]*\"</td>
+	</tr>
+	<tr>
+		<td>></td>
+		<td>&lt TAG_CLOSE &gt</td>
+		<td>></td>
+	</tr>
+	<tr>
+		<td>Click here</td>
+		<td>&lt string, "Click here" &gt</td>
+		<td>[^<]*</td>
+	</tr>
+	<tr>
+		<td><</td>
+		<td>&lt TAG_OPEN &gt</td>
+		<td><</td>
+	</tr>
+	<tr>
+		<td>/a</td>
+		<td>&lt TAGEND_a &gt</td>
+		<td>"/"a or \/a</td>
+	</tr>
+	<tr>
+		<td>></td>
+		<td>&lt TAG_CLOSE &gt</td>
+		<td>></td>
+	</tr>
+	<tr>
+		<td><</td>
+		<td>&lt TAG_OPEN &gt</td>
+		<td><</td>
+	</tr>
+	<tr>
+		<td>/p</td>
+		<td>&lt TAGEND_p &gt</td>
+		<td>"/"p or \/p</td>
+	</tr>
+	<tr>
+		<td>></td>
+		<td>&lt TAG_CLOSE &gt</td>
+		<td>></td>
+	</tr>
+</table>
+
+####Question 3
+a) [b-df-hj-np-tv-z]\*a[b-df-hj-np-tv-z]\*e[b-df-hj-np-tv-z]\*i[b-df-hj-np-tv-z]\*o[b-df-hj-np-tv-z]\*u[b-df-hj-np-tv-z]*
+
+b) a+b\*c\*d\*e\*f\*g\*|a\*b+c\*d\*e\*f\*|a\*b\*c+d\*e\*f\*g\*|a\*b\*c\*d+e\*f\*g\*|a\*b\*c\*d\*e+f\*g\*|a\*b\*c\*d\*e\*f+g\*|a\*b\*c\*d\*e\*f\*g+
+>Not including the empty string. If include should be:
+>
+>a\*b\*c\*d\*e\*f\*g\*
+
+c) [1-9]+0?[1-9]\*|[1-9]\*0?[1-9]+|0
+		
